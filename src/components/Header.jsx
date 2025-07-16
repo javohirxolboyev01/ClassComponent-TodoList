@@ -150,19 +150,47 @@ export default class Header extends Component {
               <div className="bg-white dark:bg-neutral-900 w-full max-w-md mx-4 sm:mx-0 rounded-lg p-6 shadow-xl space-y-4">
                 <h2 className="text-lg font-semibold">Create New User</h2>
                 <form onSubmit={this.onFormSubmit} className="space-y-3">
-                  {["lastName", "firstName", "age", "job", "address"].map(
-                    (value) => (
-                      <input
-                        key={value}
-                        name={value}
-                        onChange={this.onInputChange}
-                        value={this.state[value]}
-                        placeholder={value[0].toUpperCase() + value.slice(1)}
-                        className="w-full px-4 py-2 rounded-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        required
-                      />
-                    )
-                  )}
+                  <input
+                    name="lastName"
+                    onChange={this.onInputChange}
+                    value={this.state.lastName}
+                    placeholder="LastName"
+                    className="w-full px-4 py-2 rounded-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                  <input
+                    name="firstName"
+                    onChange={this.onInputChange}
+                    value={this.state.firstName}
+                    placeholder="FirstName"
+                    className="w-full px-4 py-2 rounded-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                  <input
+                    name="age"
+                    onChange={this.onInputChange}
+                    value={this.state.age}
+                    placeholder="Age"
+                    className="w-full px-4 py-2 rounded-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                  <input
+                    name="job"
+                    onChange={this.onInputChange}
+                    value={this.state.job}
+                    placeholder="Job"
+                    className="w-full px-4 py-2 rounded-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+                  <input
+                    name="address"
+                    onChange={this.onInputChange}
+                    value={this.state.address}
+                    placeholder="Address"
+                    className="w-full px-4 py-2 rounded-md bg-neutral-100 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    required
+                  />
+
                   <div className="flex justify-end gap-4 pt-2">
                     <button
                       type="button"
